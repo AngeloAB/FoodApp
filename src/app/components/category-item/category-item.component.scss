@@ -1,0 +1,35 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+
+    .image-card{
+      background-color: #f3f3f3;
+      padding: 0.8rem;
+      border-radius: 1.5rem;
+      margin-bottom: 0.5rem;
+      //width: 80px;
+     // height: 80px;
+      //padding-top: 25%;
+      
+      ion-img{
+        opacity: 0.8;
+      }
+      
+      
+    }
+    p{
+      color: #c7c7c7;
+    }
+  }
+  .wrapper.active{
+    .image-card{
+      background-color: #6b45bc;
+    }
+    p{
+      color: #6b45bc;
+      font-weight: 600;
+    }
+  }

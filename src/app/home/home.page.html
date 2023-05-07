@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+</ion-header>
+
+<ion-content >
+  <div class="header">
+    <h1>Menu</h1>
+    <div class="avatar">
+      <img src="../../assets/imagen/fotoperfil.jpeg" alt="">
+    </div>
+   </div>
+
+   <!--Searchbar-->
+   <app-searchbar></app-searchbar>
+
+   <!--Caategory-->
+
+   <div class="categorias">
+    <app-category-item *ngFor="let item of categorias" [item]="item"></app-category-item>
+  <!--  <ion-card *ngFor="let car of categorias">
+    <div class="wrapper" ngClass="car.active ? 'active' : ''">
+      <div class="image-card">
+        <ion-img src="../../assets/img-cities/{{car.image}}"></ion-img>
+      </div>
+    
+      <p class="ion-no-margin">{{car.name}}</p>
+    </div>
+  </ion-card>  -->
+   </div>
+
+   <!--promocion-->
+
+
+    <ion-label class="titulo-promo">Promoción</ion-label>
+   <div class="promocion">
+     <img class="img-promo" src="../../assets/imagen/papas.png" alt="">
+     <h2>Oferta de hoy</h2>
+     <h1>Caja de papas fritas gratis</h1>
+     <h3>Por cada compra superior a 150</h3>
+   </div>
+
+   <!--popular-->
+    
+   <ion-label class="titulo-pop">Popular</ion-label>
+   <div class="food-list" >
+    <app-food-card *ngFor ="let food of foods" [item]="food" (clicked)="goToDetailPage(food.id)"></app-food-card>
+
+   </div>
+</ion-content>
